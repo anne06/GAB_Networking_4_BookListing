@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Book Listing</string>
+
+    <!-- Messages -->
+    <string name="no_Internet_Connectivity">No Internet Connectivity</string>
+    <string name="empty_list">There is no book for this search</string>
+
+    <!-- Views -->
+    <string name="search_hint">Enter the author of the book</string>\
+    <string name="multi_search">Mutlti criteria search</string>
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+</resources>

@@ -1,0 +1,13 @@
+
+
+
+
+https://www.googleapis.com/books/v1/volumes?q=cry+night+inauthor:clark&maxResult=20&orderBy=newest
+
+Auteur
+https://www.googleapis.com/books/v1/volumes?q=+inauthor:clark&maxResult=20&orderBy=newest
+
+Titre
+
+Livres
+https://www.googleapis.com/books/v1/volumes?q=+intitle:cry+night+inauthor:clark&maxResult=20&printType=books&orderBy=newest
