@@ -2,6 +2,7 @@ package com.example.android.booklisting;
 
 import android.app.LoaderManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -47,6 +49,21 @@ public class MainActivity extends AppCompatActivity
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         bookListView.setAdapter(mAdapter);
+
+        // Add a listener on a clicked item to open
+        // a new activity which displays all the book details
+        bookListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Globals g = Globals.getInstance();
+                g.setData(mAdapter.getItem(position));
+
+                Intent intent = new Intent(MainActivity.this, DisplayABook.class);
+                startActivity(intent);
+
+            }
+        });
 
         Button searchBtn = (Button) findViewById(R.id.searchBtn);
         // Hide the loading indicator

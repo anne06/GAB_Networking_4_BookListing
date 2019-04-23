@@ -87,5 +87,6 @@ public class Book {
     public float getAverageRating() {
         return mAverageRating;
     }
+
 }
 
